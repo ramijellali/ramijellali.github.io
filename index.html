@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rami Jellali — AI Engineer | Agentic RAG · Voice AI · MLOps</title>
+<meta name="description" content="AI Engineer with three systems in production. Built and deployed Sophie at Sopra Banking Software: 0% hallucination, 2.9s to first spoken answer, deployed solo.">
+<meta property="og:title" content="Rami Jellali — AI Engineer">
+<meta property="og:description" content="Three AI systems in production. 0% hallucination on a certified golden set.">
+<meta property="og:image" content="https://github.com/ramijellali.png?size=460">
+<meta name="theme-color" content="#080C18">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#080C18;--bg2:#0D1426;--card:#111A30;--card2:#152039;
+--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+--tx:#EDF1F8;--mut:#8B97B2;--dim:#5D6A85;
+--gold:#F2B544;--gold2:#FFD37A;--red:#E8663C;--grn:#4ADE9E;
+--dsp:'Archivo',system-ui,sans-serif;--bd:'Inter',system-ui,sans-serif;--mo:'JetBrains Mono',monospace;
+--w:1200px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--bd);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+background:radial-gradient(900px 500px at 78% -8%,rgba(242,181,68,.10),transparent 60%),radial-gradient(700px 500px at 5% 12%,rgba(74,140,255,.07),transparent 60%)}
+.w{max-width:var(--w);margin:0 auto;padding:0 34px;position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:#0A0F1C}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+nav{position:sticky;top:0;z-index:60;background:rgba(8,12,24,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:70px}
+.mk{display:flex;align-items:center;gap:12px;font-family:var(--mo);font-size:12.5px;font-weight:700;letter-spacing:.06em}
+.mk img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid var(--line2)}
+.mk i{color:var(--gold);font-style:normal}
+.nl{display:flex;gap:30px;align-items:center;font-size:14.5px}
+.nl a{color:var(--mut);transition:color .16s}
+.nl a:hover{color:var(--tx)}
+.nc{background:var(--gold);color:#0A0F1C!important;padding:10px 20px;border-radius:3px;font-size:13.5px;font-weight:600;transition:.16s}
+.nc:hover{background:var(--gold2);transform:translateY(-1px)}
+@media(max-width:860px){.nl a:not(.nc){display:none}}
+.hero{padding:82px 0 0}
+.hg{display:grid;grid-template-columns:1.5fr .8fr;gap:64px;align-items:center}
+@media(max-width:960px){.hg{grid-template-columns:1fr;gap:44px}}
+.eb{display:inline-flex;align-items:center;gap:10px;font-family:var(--mo);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;border:1px solid rgba(242,181,68,.28);padding:7px 14px;border-radius:100px;background:rgba(242,181,68,.06)}
+.pl{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pl 2.4s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:var(--dsp);font-size:clamp(40px,5.6vw,68px);font-weight:800;font-stretch:112%;line-height:1.02;letter-spacing:-.03em;margin-bottom:26px;max-width:17ch}
+h1 span{color:var(--gold)}
+.ld{font-size:18px;line-height:1.68;color:var(--mut);max-width:58ch;margin-bottom:34px}
+.ld b{color:var(--tx);font-weight:600}
+.cta{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--gold);color:#0A0F1C;padding:15px 28px;border-radius:3px;font-size:14.5px;font-weight:600;transition:.18s}
+.b1:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 30px -12px rgba(242,181,68,.6)}
+.b2{border:1px solid var(--line2);padding:15px 28px;border-radius:3px;font-size:14.5px;font-weight:500;transition:.18s}
+.b2:hover{border-color:var(--gold);color:var(--gold)}
+.pf{position:relative;border-radius:5px;overflow:hidden;aspect-ratio:1/1.12;background:var(--card);border:1px solid var(--line)}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:center 10%;filter:grayscale(1) contrast(1.1) brightness(.92);transition:filter .5s}
+.pf:hover img{filter:grayscale(0) contrast(1) brightness(1)}
+.pf::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,12,24,.88) 100%)}
+.pc{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:2}
+.pc b{display:block;font-size:16px;font-weight:600}
+.pc span{display:block;font-family:var(--mo);font-size:10.5px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-top:5px}
+.trace{margin-top:64px;border:1px solid var(--line);border-radius:5px;background:linear-gradient(180deg,var(--card),var(--bg2));overflow:hidden}
+.th{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tt{font-family:var(--mo);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx);font-weight:700}
+.tg{font-family:var(--mo);font-size:10.5px;color:var(--dim)}
+.tb{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}
+@media(max-width:900px){.tb{grid-template-columns:repeat(2,1fr)}}
+.st{background:var(--bg2);padding:20px 18px;position:relative;overflow:hidden}
+.st::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.trace.in .st::after{width:100%}
+.trace.in .st:nth-child(2)::after{transition-delay:.12s}
+.trace.in .st:nth-child(3)::after{transition-delay:.24s}
+.trace.in .st:nth-child(4)::after{transition-delay:.36s}
+.trace.in .st:nth-child(5)::after{transition-delay:.48s}
+.sn{font-family:var(--mo);font-size:10px;color:var(--dim);letter-spacing:.1em;margin-bottom:9px}
+.sl{font-size:13.5px;font-weight:600;margin-bottom:7px;line-height:1.3}
+.sv{font-family:var(--mo);font-size:19px;font-weight:700;color:var(--gold);letter-spacing:-.02em}
+.tf{padding:11px 22px;border-top:1px solid var(--line);font-family:var(--mo);font-size:10.5px;color:var(--dim);background:rgba(0,0,0,.22)}
+.mt{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0;margin-top:104px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+@media(max-width:900px){.mg{grid-template-columns:repeat(2,1fr);gap:32px}}
+.mn{font-family:var(--dsp);font-size:44px;font-weight:800;font-stretch:110%;letter-spacing:-.04em;line-height:1;margin-bottom:10px;background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ml{font-size:13.5px;color:var(--mut);line-height:1.5}
+sec,section{padding:104px 0}
+.sh{margin-bottom:56px;max-width:66ch}
+.se{font-family:var(--mo);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h2{font-family:var(--dsp);font-size:clamp(28px,3.7vw,42px);font-weight:700;font-stretch:108%;letter-spacing:-.025em;line-height:1.14;margin-bottom:16px}
+h2 span{color:var(--gold)}
+.ss{font-size:16.5px;color:var(--mut);line-height:1.65}
+.vp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.vp{grid-template-columns:1fr}}
+.vi{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:32px 28px;transition:.22s}
+.vi:hover{border-color:rgba(242,181,68,.4);transform:translateY(-3px)}
+.vn{font-family:var(--mo);font-size:11px;color:var(--gold);letter-spacing:.12em;margin-bottom:18px}
+.vi h4{font-family:var(--dsp);font-size:19px;font-weight:700;font-stretch:105%;line-height:1.3;margin-bottom:12px;letter-spacing:-.01em}
+.vi p{font-size:14.5px;color:var(--mut);line-height:1.68}
+.gate{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--card)}
+.gh{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 24px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:rgba(0,0,0,.22)}
+.gb{display:grid;grid-template-columns:1fr 1.1fr}
+@media(max-width:900px){.gb{grid-template-columns:1fr}}
+.gc{padding:32px 28px;border-right:1px solid var(--line)}
+@media(max-width:900px){.gc{border-right:none;border-bottom:1px solid var(--line)}}
+.gq{font-family:var(--mo);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+.gt{font-size:15.5px;font-weight:500;margin-bottom:28px;line-height:1.45}
+.sr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.sc{font-family:var(--mo);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim)}
+.svl{font-family:var(--mo);font-size:38px;font-weight:700;letter-spacing:-.04em;color:var(--gold);transition:color .2s}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;outline:none;margin:16px 0 8px;cursor:pointer;border-radius:3px;background:var(--line2)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--card);box-shadow:0 0 0 1px var(--line2),0 0 18px rgba(242,181,68,.5);cursor:grab}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--card);cursor:grab}
+.scl{display:flex;justify-content:space-between;font-family:var(--mo);font-size:10px;color:var(--dim)}
+.scl b{color:var(--gold)}
+.thr{margin-top:24px;padding-top:18px;border-top:1px dashed var(--line2);font-family:var(--mo);font-size:11.5px;color:var(--mut);line-height:1.8}
+.thr b{color:var(--gold)}
+.go{padding:32px 28px;min-height:280px;display:flex;flex-direction:column}
+.stt{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;font-family:var(--mo);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;padding:6px 13px;border-radius:3px;margin-bottom:20px;font-weight:700}
+.stt.ok{background:rgba(74,222,158,.13);color:var(--grn)}
+.stt.no{background:rgba(232,102,60,.14);color:var(--red)}
+.dt{width:6px;height:6px;border-radius:50%;background:currentColor}
+.ans{font-size:15.5px;line-height:1.7;margin-bottom:auto;color:var(--tx)}
+.ct{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.cl{font-family:var(--mo);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim);margin-bottom:11px}
+.ci{font-family:var(--mo);font-size:11.5px;color:var(--mut);padding:4px 0;display:flex;gap:10px}
+.ci i{color:var(--gold);font-style:normal}
+.gn{padding:12px 24px;border-top:1px solid var(--line);font-family:var(--mo);font-size:10.5px;color:var(--dim);background:rgba(0,0,0,.22)}
+.pj{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:36px;margin-bottom:20px;transition:.22s;position:relative;overflow:hidden}
+.pj::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);opacity:0;transition:opacity .22s}
+.pj:hover{border-color:var(--line2);transform:translateY(-3px);background:var(--card2)}
+.pj:hover::before{opacity:1}
+.pt{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:18px;align-items:flex-start}
+.pj h3{font-family:var(--dsp);font-size:23px;font-weight:700;font-stretch:106%;letter-spacing:-.02em;line-height:1.24;margin-bottom:8px}
+.po{font-family:var(--mo);font-size:11.5px;color:var(--dim);letter-spacing:.04em}
+.bg{font-family:var(--mo);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:3px;white-space:nowrap;font-weight:700;height:fit-content}
+.bp{background:var(--gold);color:#0A0F1C}
+.br{background:rgba(255,255,255,.07);color:var(--mut);border:1px solid var(--line)}
+.pd{font-size:15.5px;line-height:1.72;color:var(--mut);max-width:78ch;margin-bottom:28px}
+.pd b{color:var(--tx);font-weight:600}
+.fc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+@media(max-width:760px){.fc{grid-template-columns:repeat(2,1fr)}}
+.fn{font-family:var(--mo);font-size:20px;font-weight:700;letter-spacing:-.03em;margin-bottom:6px;color:var(--gold)}
+.fl{font-size:12.5px;color:var(--dim);line-height:1.45}
+.tg2{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tag{font-family:var(--mo);font-size:10.5px;color:var(--mut);border:1px solid var(--line);padding:5px 10px;border-radius:3px;background:rgba(255,255,255,.03)}
+.lks{display:flex;flex-wrap:wrap;gap:10px}
+.lk{display:inline-flex;align-items:center;gap:8px;font-family:var(--mo);font-size:11.5px;color:var(--tx);border:1px solid var(--line2);padding:9px 14px;border-radius:3px;transition:.16s}
+.lk:hover{border-color:var(--gold);color:var(--gold);background:rgba(242,181,68,.07)}
+.lk svg{width:13px;height:13px;flex:none}
+.vbx{margin-bottom:26px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#000}
+.vbx video{width:100%;display:block;max-height:520px}
+.vcp{padding:12px 18px;border-top:1px solid var(--line);font-family:var(--mo);font-size:10.5px;color:var(--dim)}
+.cps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.cps{grid-template-columns:1fr}}
+.cp{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:32px 28px;transition:.22s}
+.cp:hover{border-color:rgba(242,181,68,.35)}
+.cp h4{font-family:var(--dsp);font-size:17px;font-weight:700;font-stretch:105%;margin-bottom:13px}
+.cp p{font-size:14px;color:var(--mut);line-height:1.68;margin-bottom:18px}
+.cp ul{list-style:none;font-family:var(--mo);font-size:11.5px;color:var(--dim);line-height:2.1}
+.cp li::before{content:"▸ ";color:var(--gold)}
+.ab{display:grid;grid-template-columns:1.4fr 1fr;gap:74px}
+@media(max-width:900px){.ab{grid-template-columns:1fr;gap:48px}}
+.ab p{font-size:16.5px;line-height:1.78;color:var(--mut);margin-bottom:20px}
+.ab p b{color:var(--tx);font-weight:600}
+.sb{margin-bottom:30px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.sb:last-child{border-bottom:none}
+.sb h5{font-family:var(--mo);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+.sb p{font-size:14.5px;line-height:1.55;margin-bottom:3px;color:var(--tx)}
+.sb span{font-size:13px;color:var(--dim);display:block;margin-bottom:10px}
+.cn{border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg2),var(--bg));padding:104px 0}
+.cls{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+@media(max-width:900px){.cls{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.cls{grid-template-columns:1fr}}
+.cit{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:26px 22px;display:block;transition:.2s}
+.cit:hover{border-color:var(--gold);transform:translateY(-3px);background:var(--card2)}
+.cil{font-family:var(--mo);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.civ{font-size:15px;color:var(--tx);word-break:break-word}
+ft,footer{padding:34px 0;font-family:var(--mo);font-size:11px;color:var(--dim);border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:60px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav><div class="w nb">
+<a class="mk" href="#top"><img src="https://github.com/ramijellali.png?size=460" alt="Rami Jellali">RAMI JELLALI <i>/</i> AI ENGINEER</a>
+<div class="nl"><a href="#work">Work</a><a href="#skills">Capabilities</a><a href="#about">About</a><a class="nc" href="#contact">Hire me</a></div>
+</div></nav>
+<header class="hero w" id="top">
+<div class="hg">
+<div>
+<div class="eb"><span class="pl"></span>Available immediately · Tunis · Open to France &amp; Europe</div>
+<h1>I build AI systems that know when to <span>stay quiet</span>.</h1>
+<p class="ld">Three AI systems running in production — built end to end, deployed solo, and measured. Most recently <b>Sophie</b>: a voice-to-voice agentic RAG platform at Sopra Banking Software, answering sales teams from 900+ internal documents with cited answers, <b>0% hallucination</b> on a certified golden set.</p>
+<div class="cta"><a class="b1" href="#work">See the work</a><a class="b2" href="https://www.linkedin.com/in/rami-jellali/" target="_blank" rel="noopener">Message me on LinkedIn</a></div>
+</div>
+<div class="pf"><img src="https://github.com/ramijellali.png?size=460" alt="Rami Jellali, AI Engineer"><div class="pc"><b>Rami Jellali</b><span>Diplôme d'Ingénieur · Data Science</span></div></div>
+</div>
+<div class="trace rv">
+<div class="th"><div class="tt">Sophie · production request trace</div><div class="tg">measured in production · Azure GPU VM · Tesla T4</div></div>
+<div class="tb">
+<div class="st"><div class="sn">01 ROUTE</div><div class="sl">Intent gate</div><div class="sv">92%</div></div>
+<div class="st"><div class="sn">02 CACHE</div><div class="sl">Redis semantic hit</div><div class="sv">150ms</div></div>
+<div class="st"><div class="sn">03 RETRIEVE</div><div class="sl">Hybrid over 14,780 vectors</div><div class="sv">~80ms</div></div>
+<div class="st"><div class="sn">04 RERANK</div><div class="sl">Cross-encoder on GPU</div><div class="sv">4.5s</div></div>
+<div class="st"><div class="sn">05 SPEAK</div><div class="sl">First spoken answer</div><div class="sv">2.9s</div></div>
+</div>
+<div class="tf">Every figure from a golden-set run or a Langfuse production trace — not an estimate.</div>
+</div>
+</header>
+<div class="w"><div class="mt rv"><div class="mg">
+<div><div class="mn">0%</div><div class="ml">Hallucination on a certified 50-question golden set</div></div>
+<div><div class="mn">90%</div><div class="ml">Citation coverage on the same evaluation set</div></div>
+<div><div class="mn">~17×</div><div class="ml">Cost reduction via three-tier routing</div></div>
+<div><div class="mn">9,933</div><div class="ml">Deduplicated chunks from 900+ documents</div></div>
+</div></div></div>
+<section class="w">
+<div class="sh rv"><div class="se">Why hire me</div><h2>Most AI candidates show notebooks. <span>I show systems under load.</span></h2></div>
+<div class="vp rv">
+<div class="vi"><div class="vn">01</div><h4>I own the whole stack</h4><p>Retrieval architecture, model fine-tuning, FastAPI services, Docker, CI pipelines, cloud deployment, observability. At SBS I was the only engineer on Sophie — from embedding strategy to Caddy auto-HTTPS.</p></div>
+<div class="vi"><div class="vn">02</div><h4>I measure before I claim</h4><p>Every number here comes from a golden set, a benchmark, or a production monitor. I build the evaluation harness first, wire it into CI as a quality gate, then optimise against it.</p></div>
+<div class="vi"><div class="vn">03</div><h4>I work across the data spectrum</h4><p>Agentic RAG and voice AI, but also Hadoop/Hive pipelines, MLflow lifecycles, star-schema warehouses and Power BI. AI, data engineering and analytics seen from different distances.</p></div>
+</div>
+</section>
+<section class="w">
+<div class="sh rv"><div class="se">The differentiator</div><h2>The hard part wasn't retrieval. It was teaching it to <span>say "I don't know"</span>.</h2><p class="ss">Drag the slider. Below 0.30 confidence, Sophie declines instead of guessing — the single decision that took hallucination to zero.</p></div>
+<div class="gate rv">
+<div class="gh"><div class="tt">Interactive · refusal gate</div><div class="tg">bge-reranker-v2-m3 · calibrated cross-encoder</div></div>
+<div class="gb">
+<div class="gc">
+<div class="gq">Incoming query</div>
+<div class="gt">"What's the early-termination clause in the Tier-3 service agreement?"</div>
+<div class="sr"><div class="sc">Retrieval confidence</div><div class="svl" id="val">0.72</div></div>
+<input type="range" id="slider" min="0" max="100" value="72" aria-label="Retrieval confidence score">
+<div class="scl"><span>0.00</span><b>0.30 gate</b><span>1.00</span></div>
+<div class="thr">Below <b>0.30</b> the system refuses.<br>0% hallucination on 50 certified questions.</div>
+</div>
+<div class="go">
+<div class="stt ok" id="state"><span class="dt"></span><span id="stx">Answer served</span></div>
+<div class="ans" id="ans">Tier-3 agreements carry a 90-day early-termination window with written notice. Penalty waivers apply where uptime fell below the committed threshold in any two consecutive quarters.</div>
+<div class="ct" id="cites"><div class="cl">Sources</div><div class="ci"><i>&rarr;</i> Service_Agreement_Master.pdf · §4.2, p.17</div><div class="ci"><i>&rarr;</i> Commercial_Playbook_EMEA.docx · p.34</div></div>
+</div>
+</div>
+<div class="gn">Illustrative reconstruction of production behaviour. Documents shown are generic examples, not client data.</div>
+</div>
+</section>
+<section class="w" id="work">
+<div class="sh rv"><div class="se">Selected work</div><h2>Systems that shipped, <span>with the numbers</span> to prove it.</h2></div>
+<article class="pj rv">
+<div class="pt"><div><h3>Sophie / RevOps Nexus — voice-to-voice agentic RAG</h3><div class="po">Sopra Banking Software · Feb – Jul 2026 · sole engineer</div></div><div class="bg bp">In production</div></div>
+<div class="vbx"><video controls preload="metadata" playsinline><source src="sophie-demo.mp4" type="video/mp4"></video><div class="vcp">Sophie — live voice-to-voice retrieval over 900+ internal documents</div></div>
+<p class="pd">A voice-to-voice agentic RAG platform answering sales teams' questions across 900+ internal documents — pricing, service agreements, contracts, playbooks — with cited, verifiable answers. A calibrated cross-encoder refusal gate declines below 0.30 confidence, which is what took hallucination to zero. Ingestion handled PDF, DOCX, PPTX, XLSX, video transcription and screen-OCR into 9,933 deduplicated chunks. <b>Deployed solo, end to end, on EU-resident infrastructure — GDPR by design.</b></p>
+<div class="fc"><div><div class="fn">0%</div><div class="fl">Hallucination, golden set</div></div><div><div class="fn">946</div><div class="fl">Node GraphRAG summary tree</div></div><div><div class="fn">96.7%</div><div class="fl">Router classifier accuracy</div></div><div><div class="fn">20s → 4.5s</div><div class="fl">GPU reranking, Tesla T4</div></div></div>
+<div class="tg2"><span class="tag">LlamaIndex</span><span class="tag">Qdrant HNSW</span><span class="tag">bge-m3</span><span class="tag">RRF</span><span class="tag">GraphRAG / RAPTOR</span><span class="tag">gpt-realtime</span><span class="tag">WebRTC</span><span class="tag">Redis</span><span class="tag">FastAPI</span><span class="tag">Langfuse</span><span class="tag">Azure GPU VM</span><span class="tag">GitLab CI</span></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>TunTTS &amp; the autonomous phone agent</h3><div class="po">Converty · Jun 2025 – Jan 2026</div></div><div class="bg bp">In production</div></div>
+<p class="pd">Tunisian Arabic has no commercial text-to-speech support. So I built it. Fine-tuned Coqui XTTS-v2 through transfer learning into a natural-sounding Darija voice, chosen after benchmarking Google and OpenAI TTS (MSA-only) and VITS-from-scratch. Then shipped an autonomous phone agent: every new order triggers an outbound VoIP call where the agent reads the order back and collects spoken confirmation in dialect. In-call tools run as MCP servers. <b>The full workflow completes with no human in the loop.</b></p>
+<div class="fc"><div><div class="fn">22.05 kHz</div><div class="fl">Resampled training corpus</div></div><div><div class="fn">fp16</div><div class="fl">Mixed-precision inference API</div></div><div><div class="fn">3-way</div><div class="fl">Arabic / French / English switching</div></div><div><div class="fn">0</div><div class="fl">Humans in the call loop</div></div></div>
+<div class="tg2"><span class="tag">Coqui XTTS-v2</span><span class="tag">GPTTrainer</span><span class="tag">Voice cloning</span><span class="tag">VoIP / SIP</span><span class="tag">MCP servers</span><span class="tag">Google ADK</span><span class="tag">Gemini</span><span class="tag">ffmpeg</span><span class="tag">librosa</span></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>FarmWise — offline RAG for rural agronomy</h3><div class="po">ESPRIT · Bal des Projets 2025 · owned both AI cores</div></div><div class="bg br">Team of 5</div></div>
+<p class="pd">Farmers in low-connectivity zones can't call an API. So the assistant runs entirely offline: 13 agronomy books distilled into 2,549 FAISS chunks, served by a local Mistral model through Ollama — <b>zero API cost, zero connectivity required</b>. Live context from four IoT sensor streams, and a ResNet-50 classifier reading Sentinel-2 tiles from Google Earth Engine.</p>
+<div class="fc"><div><div class="fn">2,549</div><div class="fl">FAISS chunks, 384-dim</div></div><div><div class="fn">10</div><div class="fl">EuroSAT land-cover classes</div></div><div><div class="fn">95%</div><div class="fl">Plant-disease CNN accuracy</div></div><div><div class="fn">10m</div><div class="fl">Satellite tile resolution</div></div></div>
+<div class="tg2"><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">Ollama</span><span class="tag">Mistral</span><span class="tag">ResNet-50</span><span class="tag">PyTorch</span><span class="tag">Google Earth Engine</span><span class="tag">spaCy NER</span><span class="tag">MongoDB</span></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>End-to-end MLOps pipeline — churn prediction</h3><div class="po">Production-style ML lifecycle · ESPRIT</div></div><div class="bg br">MLOps</div></div>
+<p class="pd">Seven classifiers benchmarked on a 3,333-customer telecom dataset with SMOTE correction, every run tracked in MLflow with versioned artifacts. Served through FastAPI with per-request model selection, containerised, published to Docker Hub automatically by CI. <b>The same stages run in both GitHub Actions and a custom Jenkins controller</b> — the point was the lifecycle, not the model.</p>
+<div class="fc"><div><div class="fn">96.2%</div><div class="fl">Accuracy, top model</div></div><div><div class="fn">0.94</div><div class="fl">ROC-AUC</div></div><div><div class="fn">0.86</div><div class="fl">F1 score</div></div><div><div class="fn">7</div><div class="fl">Classifiers benchmarked</div></div></div>
+<div class="tg2"><span class="tag">MLflow</span><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">SMOTE</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">Docker Hub</span><span class="tag">Streamlit</span></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>Big data pipeline — election management system</h3><div class="po">Hadoop ecosystem · Tunisian 2024 elections</div></div><div class="bg br">Data engineering</div></div>
+<p class="pd">A full distributed ingestion chain: MySQL imported into HDFS with Sqoop, landing in a Hive warehouse for SQL-on-Hadoop querying. Modelled candidate, vote and district tables, then wrote <b>custom Python MapReduce jobs via Hadoop Streaming</b> — mapper emitting key-value pairs from raw voting records, reducer aggregating counts per candidate and district.</p>
+<div class="fc"><div><div class="fn">Sqoop</div><div class="fl">MySQL → HDFS ingestion</div></div><div><div class="fn">Hive</div><div class="fl">Distributed warehouse layer</div></div><div><div class="fn">MapReduce</div><div class="fl">Custom Python via Streaming</div></div><div><div class="fn">3</div><div class="fl">Fact &amp; dimension tables</div></div></div>
+<div class="tg2"><span class="tag">Hadoop</span><span class="tag">HDFS</span><span class="tag">Hive</span><span class="tag">Sqoop</span><span class="tag">MapReduce</span><span class="tag">MySQL</span></div>
+<div class="lks"><a class="lk" href="https://medium.com/@rami.jellali/building-a-big-data-pipeline-for-election-management-a-hands-on-journey-b19154722e27" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>Read on Medium</a></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>Airline loyalty campaign analytics</h3><div class="po">Northern Lights Air · Power BI · star schema</div></div><div class="bg br">Data analysis</div></div>
+<p class="pd">Star-schema model built from three source tables covering 16,000 customers and 39,000+ flight activities across two and a half years. DAX time-intelligence isolated the campaign's real effect from seasonal noise, and cohort profiling turned the finding into a <b>targeting recommendation rather than a chart</b>.</p>
+<div class="fc"><div><div class="fn">30–70%</div><div class="fl">YoY enrolment lift</div></div><div><div class="fn">39,000+</div><div class="fl">Flight activities modelled</div></div><div><div class="fn">16,000</div><div class="fl">Customer records</div></div><div><div class="fn">64%</div><div class="fl">Cohort with bachelor's degrees</div></div></div>
+<div class="tg2"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Star schema</span><span class="tag">ETL</span><span class="tag">Cohort analysis</span></div>
+<div class="lks"><a class="lk" href="https://medium.com/@rami.jellali/data-analysis-project-analyzing-the-effectiveness-of-marketing-campaign-e05f3e56a035" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>Read on Medium</a></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>Football match analysis with computer vision</h3><div class="po">Open source · applied CV</div></div><div class="bg br">Computer vision</div></div>
+<p class="pd">An end-to-end video-analysis system for football matches: detecting and tracking players, referees and the ball across broadcast footage, assigning players to teams, and deriving movement and possession statistics. <b>The interesting problem is identity, not detection</b> — keeping a track stable through occlusion, camera pans and shirt-colour collisions.</p>
+<div class="tg2"><span class="tag">Computer vision</span><span class="tag">Object detection</span><span class="tag">Multi-object tracking</span><span class="tag">OpenCV</span><span class="tag">Python</span></div>
+<div class="lks"><a class="lk" href="https://github.com/ramijellali/AI-ML-Football-Analysis-system" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>View on GitHub</a></div>
+</article>
+<article class="pj rv">
+<div class="pt"><div><h3>Deep learning research &amp; applied CV</h3><div class="po">Open source · ESPRIT</div></div><div class="bg br">Research</div></div>
+<p class="pd">Three public repositories covering the research side: improving <b>speech emotion recognition</b> with diffusion models — 94.36% accuracy with a fine-tuned ResNet-50, using DDPM to enrich sparse data across EmoDB and RAVDESS; <b>brain MRI segmentation</b> for medical imaging; and an end-to-end <b>COVID-19 data analysis</b> study.</p>
+<div class="fc"><div><div class="fn">94.36%</div><div class="fl">Speech emotion accuracy</div></div><div><div class="fn">DDPM</div><div class="fl">Diffusion for sparse data</div></div><div><div class="fn">2</div><div class="fl">Benchmark datasets</div></div><div><div class="fn">3</div><div class="fl">Public repositories</div></div></div>
+<div class="tg2"><span class="tag">PyTorch</span><span class="tag">Diffusion models</span><span class="tag">ResNet-50</span><span class="tag">CNN + Transformer</span><span class="tag">Mel-spectrograms</span></div>
+<div class="lks">
+<a class="lk" href="https://github.com/ramijellali/Improving-Speech-Emotion-Recognition-through-Diffusion-Comparative-Methods" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>Speech Emotion Recognition</a>
+<a class="lk" href="https://github.com/ramijellali/BRAIN-MRI-SEGMENTATIO-" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>Brain MRI Segmentation</a>
+<a class="lk" href="https://github.com/ramijellali/COVID-19-Data-Analysis" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>COVID-19 Data Analysis</a>
+</div>
+</article>
+</section>
+<section class="w" id="skills">
+<div class="sh rv"><div class="se">Capabilities</div><h2>From model to cloud, and back <span>with measured numbers</span>.</h2></div>
+<div class="cps rv">
+<div class="cp"><h4>Agentic RAG &amp; LLM systems</h4><p>Hybrid retrieval, reranking, evaluation harnesses, and refusal gates that keep systems honest under real load.</p><ul><li>LlamaIndex · LangChain · LangGraph</li><li>Qdrant · FAISS · Redis Stack</li><li>bge-m3 · cross-encoder reranking</li><li>GraphRAG · RRF · HyDE · MCP</li><li>Golden-set evaluation · CI gates</li><li>Azure OpenAI · Gemini · Ollama</li></ul></div>
+<div class="cp"><h4>Voice &amp; conversational AI</h4><p>Real-time speech-to-speech systems, TTS fine-tuning for low-resource dialects, phone agents that run unattended.</p><ul><li>gpt-realtime · speech-to-speech</li><li>Coqui XTTS-v2 · voice cloning</li><li>Whisper · WebRTC · barge-in</li><li>VoIP / SIP outbound agents</li><li>Azure Speech · talking avatar</li><li>Transfer learning · fp16</li></ul></div>
+<div class="cp"><h4>Data engineering &amp; MLOps</h4><p>The unglamorous half that decides whether a model becomes a product or stays a notebook.</p><ul><li>MLflow · experiment tracking</li><li>Docker · GitLab CI · GitHub Actions</li><li>Hadoop · Hive · Sqoop · MapReduce</li><li>ETL · star schema · Power BI / DAX</li><li>Azure · AWS · FastAPI · systemd</li><li>Langfuse · PII redaction</li></ul></div>
+</div>
+</section>
+<section class="w" id="about">
+<div class="ab">
+<div class="rv">
+<div class="se">About</div>
+<h2>I'd rather ship one system that works than <span>demo five that don't</span>.</h2>
+<p>I'm an AI engineer based in Tunis, with a Diplôme d'Ingénieur in Data Science from ESPRIT. My work sits where retrieval, voice and production infrastructure meet — the place where most AI projects quietly fall apart.</p>
+<p><b>Most RAG chatbots demo beautifully and fail in production.</b> They invent answers, they're slow, and nobody can verify them. I engineer against that: I define a measurable success criterion before writing code — accuracy on a test set, a latency target, a cost per query — and report against it every week.</p>
+<p>At Sopra Banking Software I was the sole engineer on Sophie, from the retrieval architecture through to the Azure deployment, the CI pipeline and the observability stack. When a cross-OS snapshot corruption destroyed the vector store, I migrated 14,780 vectors point by point rather than re-ingesting and losing the evaluation baseline. <b>That's the part of the job nobody puts in a demo.</b></p>
+<p>I'm looking for AI / ML engineering, data science and data engineering roles — in Tunisia, France, or remote.</p>
+</div>
+<aside class="rv">
+<div class="sb"><h5>Education</h5><p>Diplôme d'Ingénieur — Data Science</p><span>ESPRIT, Tunis · 2021–2026 · MSc equivalent</span><p>Thesis defended in English</p><span>Sophie — production agentic RAG platform (79 p.)</span></div>
+<div class="sb"><h5>Languages</h5><p>Arabic — native</p><p>French — fluent</p><p>English — full professional</p></div>
+<div class="sb"><h5>Certifications</h5><p>Cisco CCNA</p><p>AWS Academy Cloud Foundations</p><p>NVIDIA Deep Learning Fundamentals</p><p>IBM Hands-On Machine Learning</p></div>
+<div class="sb"><h5>Also</h5><p>300+ algorithm problems solved</p><span>LeetCode</span><p>Led engineering team</p><span>Empower X-Hack 2024</span></div>
+</aside>
+</div>
+</section>
+<section class="cn" id="contact">
+<div class="w">
+<div class="sh rv"><div class="se">Contact</div><h2>Tell me what <span>you're building</span>.</h2><p class="ss">If it's a fit, I'll come back with an approach and an honest estimate. If it isn't, I'll say that instead.</p></div>
+<div class="cls rv">
+<a class="cit" href="mailto:rami.jellali@esprit.tn"><div class="cil">Email</div><div class="civ">rami.jellali@esprit.tn</div></a>
+<a class="cit" href="tel:+21692635250"><div class="cil">Phone</div><div class="civ">+216 92 635 250</div></a>
+<a class="cit" href="https://www.linkedin.com/in/rami-jellali/" target="_blank" rel="noopener"><div class="cil">LinkedIn</div><div class="civ">/in/rami-jellali</div></a>
+<a class="cit" href="https://github.com/ramijellali" target="_blank" rel="noopener"><div class="cil">GitHub</div><div class="civ">/ramijellali</div></a>
+</div>
+<footer><span>Rami Jellali · AI Engineer · Tunis, Tunisia</span><span>Open to France / Europe / Remote · Available immediately</span></footer>
+</div>
+</section>
+<script>
+(function(){
+var sl=document.getElementById('slider'),v=document.getElementById('val'),st=document.getElementById('state'),sx=document.getElementById('stx'),an=document.getElementById('ans'),ct=document.getElementById('cites');
+var A='Tier-3 agreements carry a 90-day early-termination window with written notice. Penalty waivers apply where uptime fell below the committed threshold in any two consecutive quarters.';
+var R='I do not have a confident answer for that in the indexed documents. The closest matches fall below the confidence threshold, so I am not going to guess. Try narrowing the agreement tier, or ask the colleague who owns the service schedule.';
+function rd(){
+var s=sl.value/100,p=sl.value,ok=s>=0.30;
+v.textContent=s.toFixed(2);
+v.style.color=ok?'#F2B544':'#E8663C';
+var f=ok?'#F2B544':'#E8663C';
+sl.style.background='linear-gradient(to right,'+f+' 0%,'+f+' '+p+'%,rgba(255,255,255,.16) '+p+'%,rgba(255,255,255,.16) 100%)';
+if(ok){st.className='stt ok';sx.textContent='Answer served';an.textContent=A;ct.style.display='block';}
+else{st.className='stt no';sx.textContent='Declined - below threshold';an.textContent=R;ct.style.display='none';}
+}
+sl.addEventListener('input',rd);rd();
+var vd=document.querySelector('.vbx video');
+if(vd){vd.addEventListener('error',function(){var b=vd.closest('.vbx');if(b)b.style.display='none';},true);}
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:.06});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
